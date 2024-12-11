@@ -1,0 +1,52 @@
+* {
+  margin : 0;
+  padding : 0;
+  box-sizing: border-box;
+}
+
+.password-mismatch {
+  border-color: red;
+}
+
+label {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.password-strength {
+  font-size: smaller;
+  position: relative;
+}
+
+.password-strength p {
+  position: relative;
+  top: 0.5rem;
+  left : 4rem
+}
+
+.strong-pword {
+  color: green;
+}
+.moderate-pword {
+  color: orange;
+}
+.weak-pword {
+  color: red;
+}
+
+.weatherApp-form  label {
+  display: flex;
+  justify-content: center;
+}
+
+.weather-report {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-report {
+  
+}
