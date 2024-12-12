@@ -6,7 +6,7 @@ export default function CustomHook() {
     const url = `https://jsonplaceholder.typicode.com/users/${userId}`
     const {user,isLoading,error,refetch} = useFetchData(url)
 
-    if(error) return <p>An error occured while fetching the data!</p>
+    if(error) return <p>{error}</p>
 
     if(isLoading) return <p>Fetching...</p>
     

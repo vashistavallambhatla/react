@@ -7,23 +7,29 @@ const useFetchData = (url) => {
 
     const fetchData = async() => {
         setIsLoading(true)
-        setTimeout(async()=>{
+        const timer = setTimeout(async()=>{
             try{
                 const response = await fetch(url)
                 if(!response.ok){
-                    throw new Error("Network response was not ok.")
+                    if(response.status===404){
+                        throw new Error("User not found!")
+                    }else {
+                        throw new Error("Network response was not ok.")
+                    }
                 }
                 const data=await response.json()
                 console.log(data)
                 setIsLoading(false)
                 setData(data)
             } catch(error){
+                setError(error.message)
                 setIsLoading(false)
-                setError(error)
             } finally{
                 setIsLoading(false)
             }
         },2000) // using setTimeout to display the loading state
+
+        return () => clearTimeout(timer)
     }
 
     return {user : data, isLoading, error,refetch : fetchData}

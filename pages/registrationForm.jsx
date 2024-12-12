@@ -13,8 +13,7 @@ export default function RegistrationForm() {
       alert(`You can't have an empty username`)
       return
     } else if (!password.trim() || !confirmPassword.trim()) {
-      alert(`You can't have an empty password`
-      )
+      alert(`You can't have an empty password`)
       return
     }
     alert("Registered!")
