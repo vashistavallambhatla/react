@@ -36,6 +36,12 @@ label {
   color: red;
 }
 
+.mismatch-pword{
+  font-size: smaller;
+  color: red;
+  position: relative;
+  margin-top: .5rem;
+}
 .weatherApp-form  label {
   display: flex;
   justify-content: center;
@@ -45,4 +51,21 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.user-details {
+  margin-top: 3rem;
+}
+
+.userId-input {
+  width: 20%;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.users-form button{
+  margin: 10px;
+  width: 6rem;
+  height: 2rem;
+  border-radius: 1rem;
 }

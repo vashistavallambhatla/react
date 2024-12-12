@@ -74,6 +74,7 @@ export default function RegistrationForm() {
             className={!isSame && confirmPassword ? "password-mismatch" : ""}
           />
         </label>
+        {confirmPassword.trim() && !isSame && <p className="mismatch-pword">password-mismatch</p>}
         <br />
         <button type="submit">Register</button>
       </form>

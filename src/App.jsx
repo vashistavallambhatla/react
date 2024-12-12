@@ -6,6 +6,7 @@ import Todos from '../pages/todo'
 import Products from '../pages/products'
 import RegistrationForm from '../pages/registrationForm'
 import WeatherApp from '../pages/weatherApp'
+import CustomHook from '../pages/customHook'
 import {
   QueryClient,
   QueryClientProvider,
@@ -19,9 +20,7 @@ function App() {
 
   return (
     <> 
-      <QueryClientProvider client={queryClient}>
-      <WeatherApp></WeatherApp>
-      </QueryClientProvider>
+      <RegistrationForm></RegistrationForm>
     </>
   )
 }
