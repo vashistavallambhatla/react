@@ -1,10 +1,10 @@
 import { useState } from "react"
-import useFetchData from "../hooks/fetchDataHook"
+import useFetch from "../hooks/useFetch"
 
 export default function CustomHook() {
     const [userId,setUserId] = useState(-1)
     const url = `https://jsonplaceholder.typicode.com/users/${userId}`
-    const {user,isLoading,error,refetch} = useFetchData(url)
+    const {user,isLoading,error,refetch} = useFetch(url)
 
     if(error) return <p>{error}</p>
 
