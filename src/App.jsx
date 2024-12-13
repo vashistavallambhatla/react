@@ -7,6 +7,8 @@ import Products from '../pages/products'
 import RegistrationForm from '../pages/registrationForm'
 import WeatherApp from '../pages/weatherApp'
 import CustomHook from '../pages/customHook'
+import RouterPage from '../pages/routes'
+
 import {
   QueryClient,
   QueryClientProvider,
@@ -20,7 +22,7 @@ function App() {
 
   return (
     <> 
-      <CustomHook></CustomHook>
+      <RouterPage></RouterPage>
     </>
   )
 }

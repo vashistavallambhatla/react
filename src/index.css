@@ -69,3 +69,39 @@ label {
   height: 2rem;
   border-radius: 1rem;
 }
+
+ul {
+  list-style-type: none;
+}
+
+.router-navbar ul{
+  padding: 2rem;
+  display: flex;
+  background-color: blue;
+  width: 100%;
+}
+
+.router-navbar {
+  margin-bottom : 2rem;
+}
+
+.links{
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin : 0 auto;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.contact-form p {
+  padding: 20px;
+}
+
+hr {
+  text-decoration: dashed;
+}
