@@ -30,7 +30,7 @@ const useFetch = (url) => {
         return () => clearTimeout(timer)
     }
 
-    return {user : data, isLoading, error,refetch : fetchData}
+    return { user: data, isLoading, error, refetch: fetchData }
 }
 
 export default useFetch

@@ -8,12 +8,15 @@ import RegistrationForm from '../pages/registrationForm'
 import WeatherApp from '../pages/weatherApp'
 import CustomHook from '../pages/customHook'
 import RouterPage from '../pages/routes'
+import ProductList from '../pages/productList'
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
 
 import {
   QueryClient,
   QueryClientProvider,
   useQuery,
 } from '@tanstack/react-query'
+import { CartContextProvider } from '../context/CartContext'
 
 const queryClient = new QueryClient()
 
@@ -22,7 +25,13 @@ function App() {
 
   return (
     <> 
-      <RouterPage></RouterPage>
+    <Router>
+    <QueryClientProvider client={queryClient}>
+    <CartContextProvider>
+        <ProductList></ProductList>
+    </CartContextProvider>
+    </QueryClientProvider>
+    </Router>
     </>
   )
 }
