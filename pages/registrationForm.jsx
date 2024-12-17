@@ -19,6 +19,10 @@ export default function RegistrationForm() {
     alert("Registered!")
   }
 
+  const isFormValid = () => {
+    return username.trim() && password.trim() && confirmPassword.trim()
+  }
+
   const handleConfirmChange = (e) => {
     const newConfirmPassword = e.target.value
     setConfirmPassword(newConfirmPassword)
@@ -39,7 +43,7 @@ export default function RegistrationForm() {
   }
 
   return (
-    <>
+    <div>
     <ErrorBoundary
     fallback={<p>There was an error submitting the form!</p>}
     >
@@ -76,9 +80,9 @@ export default function RegistrationForm() {
         </label>
         {confirmPassword.trim() && !isSame && <p className="mismatch-pword">password-mismatch</p>}
         <br />
-        <button type="submit">Register</button>
+        <button type="submit" disabled={!isFormValid()}>Register</button>
       </form>
     </ErrorBoundary>
-    </>
+    </div>
   )
 }

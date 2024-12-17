@@ -28,7 +28,7 @@ function App() {
     <Router>
     <QueryClientProvider client={queryClient}>
     <CartContextProvider>
-        <ProductList></ProductList>
+        <RegistrationForm></RegistrationForm>
     </CartContextProvider>
     </QueryClientProvider>
     </Router>
